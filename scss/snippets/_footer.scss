@@ -5,6 +5,7 @@
         // @include justify-content(center);
         padding: 50px 150px;
         gap: 28px;
+        margin-top: 50px;
         @include mq("phone-and-tablet"){
             display: block;
             padding: 50px 30px;
@@ -13,6 +14,14 @@
             width: 40%;
             @include mq("phone-and-tablet"){
                 width: 100%;
+            }
+            .image-wrapper{
+                max-width: 200px;
+                width: 100%;
+                @include mq("phone-and-tablet"){
+                    max-width: 180px;
+                }
+                
             }
             .footer-text{
                 margin-top: 25px;
@@ -41,11 +50,20 @@
                             .link{
                                 margin-top: 0;
                                 text-transform: capitalize;
+                                font-weight: 700;
                                 @include mq("phone-and-tablet"){
                                     margin-bottom: 10px;
+                                    font-size:22px;
                                 }
                             }
                            .submenu{
+                            li{
+                                a{
+                                    @include mq("phone-and-tablet"){
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
                             &.contact{
                                 li {
                                     margin-bottom: 20px;
