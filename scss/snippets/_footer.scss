@@ -1,0 +1,89 @@
+.site-footer-main {
+    .footer-section-wrapper {
+        @include flexbox();
+        // @include align-items(center);
+        // @include justify-content(center);
+        padding: 50px 150px;
+        gap: 28px;
+        @include mq("phone-and-tablet"){
+            display: block;
+            padding: 50px 30px;
+        }
+        .footer-company-logo{
+            width: 40%;
+            @include mq("phone-and-tablet"){
+                width: 100%;
+            }
+            .footer-text{
+                margin-top: 25px;
+                p{
+                   font-size: 14px;
+                   line-height: 22px;
+                   letter-spacing: 1.5px
+                }
+               }
+        }
+        .footer-navigation-wrapper{
+            width: 60%;
+            @include mq("phone-and-tablet"){
+                width: 100%;
+            }
+            .site-navigation-wrapper{
+                .site-footer-navigation{
+                    .footer-menu-wrapper{
+                        @include flexbox();
+                        @include justify-content(space-between);
+                        @include mq("phone-and-tablet"){
+                            display: block;
+                            margin-top: 50px;
+                        }
+                        .menu-wrapper{
+                            .link{
+                                margin-top: 0;
+                                text-transform: capitalize;
+                                @include mq("phone-and-tablet"){
+                                    margin-bottom: 10px;
+                                }
+                            }
+                           .submenu{
+                            &.contact{
+                                li {
+                                    margin-bottom: 20px;
+                                    a {
+                                        @include flexbox();
+                                        @include align-items(center);
+                                        gap: 10px;
+                                        grid-gap: 10px;
+                                        span{
+                                            img{
+                                              
+                                                @include mq("phone-and-tablet"){
+                                                    width: 25px;
+                                                    height: 25px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                           }
+                        }    
+                    }
+                }
+            }
+        }
+        
+    }
+    .footer-copy-right{
+        padding: 10px;
+        .text {
+             p{
+                text-align: center;
+                font-size: 16px;
+                @include mq("phone-and-tablet"){
+                    font-size: 14px;
+                }
+             }
+        }
+    }
+}
