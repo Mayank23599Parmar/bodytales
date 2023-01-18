@@ -1,0 +1,40 @@
+{% style %}
+  .footer-menu-wrapper .menu-wrapper .link {
+    color: {{color}}
+  }
+  .footer-menu-wrapper .menu-wrapper ul li a {
+    color: {{color}}
+  }
+{% endstyle %}
+<div class="footer-menu-wrapper">
+  {% for menu_item in menu_list %}
+    <div class="menu-wrapper">
+      {%- assign child_list_handle = menu_item.title | handleize -%}
+      <h5 class="link">{{ menu_item.title }}</h5>
+      {%- if linklists[child_list_handle].links -%}
+        <ul class="submenu">
+          {%- for childlink in linklists[child_list_handle].links -%}
+            <li>
+              <a href="{{childlink.url}}">
+                {{ childlink.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {%- endif -%}
+    </div>
+  {% endfor %}
+  <div class="menu-wrapper">
+    <h5 class="link">Contact Us</h5>
+    <ul class="submenu contact">
+      {% for item in contactSection %}
+        <li>
+          <a href="{{item.settings.icon_url}}">
+            <span><img src="{{item.settings.icon_image | img_url: '30x30'}}"></span>
+            <span>{{ item.settings.icon_text }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

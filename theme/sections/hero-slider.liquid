@@ -1,0 +1,99 @@
+{% comment %} Hero Elider Start {% endcomment %}
+<div class="hero-slider">
+  <div class="container {% if section.settings.full_width  != blank %} full {% endif %}">
+    <div class="hero-slider-wrapper">
+      {% comment %} swiper start  {% endcomment %}
+      <div class="swiper hero-slider-swiper-js">
+        <div class="swiper-wrapper">
+          {%- for block in section.blocks -%}
+            <div class="swiper-slide">
+              <div class="image-block blocks-{{block.id}}">
+                {%- unless block.settings.image_url == blank -%}
+                <a href="{{block.settings.image_url}}">
+                {%- endunless -%}
+                <div class="image-wrapper">
+                    <div class="image xs-hide">
+               {%- if block.settings.banner_image != blank -%}
+               {%- render 'srcset', 
+              src_alt:block.settings.banner_image.alt,
+              src_name:block.settings.banner_image,
+              load_blur:true 
+              -%}
+              </div>
+                {%- endif -%}
+                {%- if block.settings.banner_image_mobile != blank -%}
+                <div class="image xs-show">
+                  {%- render 'srcset', 
+                  src_alt:block.settings.banner_image_mobile.alt,
+                  src_name:block.settings.banner_image_mobile,
+                  load_blur:true 
+                  -%}
+                </div>
+                {%- endif -%}
+                </div>
+                {%- unless block.settings.image_url == blank -%}
+                </a>
+            {%- endunless -%}
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      {% comment %} swiper ends  {% endcomment %}
+    </div>
+  </div>
+</div>
+{% comment %} Heo Slider End  {% endcomment %}
+
+{% comment %} Hero Slider Schema  start {% endcomment %}
+{% schema %}
+{
+    "name":"Hero slider",
+    "settings": [
+        {
+          "type": "checkbox",
+        "id": "full_width",
+        "label": "Full width",
+        "default": true,
+        "info": "Use same height image for Hero slider "
+        }
+
+    ],
+
+    "blocks": [
+        {
+            "type": "slideshow",
+             "name": "Slideshow",
+             "settings": [
+          {
+      "type": "header",
+      "content": "Image section"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Image for desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image_mobile",
+      "label": "Image for mobile"
+    },
+    {
+      "type": "url",
+      "id": "image_url",
+      "label": "Image URL"
+    }
+]
+        }
+    ],
+  "presets": [
+  {
+    "name": "Hero slider",
+    "category": "Slideshow"
+  }
+  ]
+}
+{% endschema %}
+
+{% comment %} Hero Slider Schema  end {% endcomment %}
