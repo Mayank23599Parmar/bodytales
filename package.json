@@ -10,7 +10,7 @@
     "start": "webpack --mode development & cd theme && theme open && theme deploy && theme watch",
     "watch": "webpack --mode development & cd theme && theme open && theme watch",
     "build": "webpack && cd theme && theme open && theme deploy",
-    "deploy": "webpack && cd theme && theme open --env=production && theme deploy --env=production",
+    "deploy": "webpack && cd theme && theme open --env=production && theme deploy --env=production --allow-live",
     "webpackProd": "webpack --mode production"
   },
   "author": "",
