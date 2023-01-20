@@ -1,0 +1,68 @@
+.home-story-page {
+    background-color: #ffff;
+    padding: 15px 0;
+    @include mq("phone-and-tablet") {
+        padding: 20px 0;
+    }
+    .home-stories {
+        max-width: 1440px;
+        width: 100%;
+        margin: 0 auto;
+
+        @include mq("phone-and-tablet") {
+            max-width: 100%;
+        }
+        .home-stories-wrapper {
+            @include flexbox();
+            @include align-items(center);
+            overflow-x: scroll;
+
+            -ms-overflow-style: none; /* IE and Edge */
+            scrollbar-width: none; /* Firefox */
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            .story-wrapper {
+                padding: 0 20px;
+                flex: 1 0 auto;
+                margin-right: 5px;
+                @include mq("phone-and-tablet") {
+                    padding: 0 10px;
+                }
+                a {
+                    .story-block {
+                        .story-image-wrapper {
+                            max-width: 100px;
+                            width: 100%;
+                            margin: 0 auto;
+                            @include mq("phone-and-tablet") {
+                                max-width: 60px;
+                            }
+                            img {
+                                border-radius: 100%;
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                        .story-text {
+                            margin-top: 10px;
+                            @include mq("phone-and-tablet") {
+                                margin-top: 8px;
+                            }
+                            p {
+                                line-height: normal;
+                                font-weight: 500;
+                                font-size: 14px;
+                                text-align: center;
+                                @include mq("phone-and-tablet") {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

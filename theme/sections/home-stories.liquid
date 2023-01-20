@@ -1,0 +1,61 @@
+<div class="home-story-page">
+  <div class="home-stories">
+    <div class="home-stories-wrapper">
+      {% for block in section.blocks %}
+        {% if block.settings.story_url != blank
+          and block.settings.story_image != blank
+          and block.settings.story_text != blank
+        %}
+          <div class="story-wrapper">
+            <a href="{{block.settings.story_url}}">
+              <div class="story-block">
+                <div class="story-image-wrapper">
+                  <img src="{{block.settings.story_image | img_url: 'master'}}" alt="{{block.settings.story_text}}">
+                </div>
+                <div class="story-text">
+                  <p>{{ block.settings.story_text }}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Stories",
+  "max_blocks": 6,
+  "blocks": [
+    {
+      "type": "icon",
+      "name": "Stories",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "story_image",
+          "label": "story image"
+        },
+        {
+          "type": "url",
+          "id": "story_url",
+          "label": "story url"
+        },
+        {
+          "type": "text",
+          "id": "story_text",
+          "label": "story title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Stories",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
