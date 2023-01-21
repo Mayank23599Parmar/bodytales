@@ -30,7 +30,7 @@ class CouponCodePopup {
                 if (couponCodePopup.classList.contains("active") && couponCodePopupBackDrop.classList.contains("active")) {
                     couponCodePopup.classList.remove("active");
                     couponCodePopupBackDrop.classList.remove("active")
-                    setCookie("couponCodePopup", 0, 0);
+                    setCookie("couponCodePopup", 1, 1);
                 }
             })
         }
