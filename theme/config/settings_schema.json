@@ -1363,6 +1363,38 @@
     ]
   },
   {
+    "name":"Coupon code popup",
+    "settings": [
+      {
+        
+        "type": "text",
+        "id": "coupon_code",
+        "label": "Coupon code"
+    },
+      {
+        
+          "type": "image_picker",
+          "id": "coupon_popup_image",
+          "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "coupon_popup_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "coupon_popup_subtitle",
+        "label": "Subtitle"
+      },
+      {
+        "type": "richtext",
+        "id": "coupon_popup_text",
+        "label": "Text"
+      }
+    ]
+  },
+  {
     "name": "Password Page",
     "settings": [
       {
