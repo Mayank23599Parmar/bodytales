@@ -6,7 +6,7 @@ class CouponCodePopup {
         this.init();
         this.closePopup();
         this.clickToCopy();
-        this.countDown()
+        
     }
     init = () => {
         const couponCodePopup = document.querySelector(".coupon-code-popup");
@@ -16,6 +16,7 @@ class CouponCodePopup {
                 if (!couponCodePopup.classList.contains("active") && !couponCodePopupBackDrop.classList.contains("active")) {
                     couponCodePopup.classList.add("active");
                     couponCodePopupBackDrop.classList.add("active")
+                    this.countDown()
                 }
             }
         }
