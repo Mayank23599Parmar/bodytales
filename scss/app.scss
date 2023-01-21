@@ -5,6 +5,7 @@
 /* @include Vendor / third party packages scss file */
 @import "./vendor/swiper.min";
 //home
-@import "./snippets//home-page/home-stories";
+@import "./snippets/home-page/home-stories";
+@import "./snippets/coupon-code-popup";
 //footer
 @import "./snippets/footer";
