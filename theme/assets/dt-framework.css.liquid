@@ -106,7 +106,8 @@ div[class*="dt-sc-flex"]> :only-child form {  float: none;}
 .breadcrumb{ padding:20px 0;}
 .breadcrumb h1{ margin: 0; padding: 0;}
 .breadcrumb:before { position: absolute; content: "";  display: block;  width: 100%;  height: 100%;  left: 0;  top: 0;  z-index: -1;  background: {{settings.color_image_overlay}};  opacity:.{{settings.image_overlay_opacity}}; }
-.breadcrumb { padding:{{settings.breadcrumb_padding_top}}px 0 {{settings.breadcrumb_padding_bottom}}px 0;  float:left;  width:100%;  height:auto;  text-align:center;  position: relative;  z-index: 1;  background:url({{ settings.breadcrumb_image | img_url: 'master' }}) center top no-repeat fixed;  margin:0 0 {{settings.breadcrumb_margin_bottom}}px 0;  background-size: cover;}
+  /* remove background image  ex .  background:url({{ settings.breadcrumb_image | img_url: 'master' }}) center top no-repeat fixed; */
+.breadcrumb { padding:{{settings.breadcrumb_padding_top}}px 0 {{settings.breadcrumb_padding_bottom}}px 0;  float:left;  width:100%;  height:auto;  text-align:center;  position: relative;  z-index: 1;  margin:0 0 {{settings.breadcrumb_margin_bottom}}px 0;  background-size: cover;}
 .breadcrumb h1 {  text-transform:uppercase;  letter-spacing:2px;  width:100%;  font-size:2.25em;  color: {{settings.breadcrumb_text_color}};}
 .breadcrumb a, .breadcrumb span {  display: inline-block;  margin-top:15px;  padding-right: 2px;  margin-right: 2px;  font-size: 1em;  color: {{ settings.breadcrumb_text_color }};}
 .breadcrumb a:hover{  color: {{ settings.breadcrumb_text_hover_color }};}

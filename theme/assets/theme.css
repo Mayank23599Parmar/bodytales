@@ -42,6 +42,8 @@ button, input, optgroup, select, textarea {
     font: inherit;
     margin: 0;
 }
+
+
 button[disabled], html input[disabled] {
     cursor: default;
 }
@@ -4305,3 +4307,4 @@ h1.product-single__title, .product-single__title.h1 {
     align-self: flex-end;
     text-align: right;
 }
+
