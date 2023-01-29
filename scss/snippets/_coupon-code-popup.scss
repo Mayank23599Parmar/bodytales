@@ -123,7 +123,7 @@
                 padding: 10px 20px;
                 @include mq("phone-and-tablet") {
                     padding: 5px 10px;
-                    max-width: 200px;
+                    max-width: 250px;
                 }
                 .coupon-code {
                     @include flexbox();
