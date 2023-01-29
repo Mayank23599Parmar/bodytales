@@ -535,12 +535,16 @@ form[class*=shopify-product]>div{ display: flex; align-items: flex-start; flex-w
 form[class*=shopify-product]>div.product_payments_btns{margin-bottom: 0;}
 form[class*=shopify-product]>div.product_payments_btns > *{ margin-right: 15px; margin-bottom: 15px;}
 @media only screen and (max-width: 600px) {
-  form[class*=shopify-product]>div.product_payments_btns > *{ margin-right: 0; margin-bottom: 0;}
+  form[class*=shopify-product]>div.product_payments_btns > *{ margin-right: 0; margin-bottom: 0; padding: 5px}
   form[class*=shopify-product]>div.product_payments_btns{
     margin-bottom: 0;
     justify-content: space-between;
     align-items: baseline;
   }
+  .product_payments_btns button, .product-form__item--submit button {
+    margin: 0;
+    padding: 5px;
+}
 }
 form[class*=shopify-product]>div.attributes-hidden{ display:none}
 form[class*=shopify-product]>div.attributes-visible{ /*display:block*/}
