@@ -534,6 +534,14 @@ div[class*="sidebar"] .sidebar.list_style .filter-panel li:before{ content: "\f1
 form[class*=shopify-product]>div{ display: flex; align-items: flex-start; flex-wrap: wrap; margin: 0 0 15px; float: left; width: 100%; line-height: 30px;}
 form[class*=shopify-product]>div.product_payments_btns{margin-bottom: 0;}
 form[class*=shopify-product]>div.product_payments_btns > *{ margin-right: 15px; margin-bottom: 15px;}
+@media only screen and (max-width: 600px) {
+  form[class*=shopify-product]>div.product_payments_btns > *{ margin-right: 0; margin-bottom: 0;}
+  form[class*=shopify-product]>div.product_payments_btns{
+    margin-bottom: 0;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
 form[class*=shopify-product]>div.attributes-hidden{ display:none}
 form[class*=shopify-product]>div.attributes-visible{ /*display:block*/}
 form[class*=shopify-product]>div.product-item-caption-select { margin-bottom: 0; }
