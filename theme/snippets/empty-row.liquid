@@ -23,5 +23,13 @@
         <div class="product_price"> <span class="money" data-currency-usd="$320.00">$0.00</span> </div>
         <del class="grid-link__sale_price"><span class="money" data-currency-usd="$756.00">$0.00</span></del> </div>              
     </div>
+    <div class="custom-product-add-to-cart">
+      <form action="/cart/add" method="post">                                  
+        <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+        <button type="submit" name="add" id="AddToCart-{{product.id}}" class="add-to-cart-btn">
+          add to cart
+        </button>
+      </form>
+    </div>
   </div>
 </li>

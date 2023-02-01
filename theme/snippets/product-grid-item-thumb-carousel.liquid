@@ -21,7 +21,7 @@
 {% assign productURL =  "/products/" | append: product.handle | append: '?view=quickview'  %}
 
 <li class="{{ swiperSlideClass }} grid-item product-grid-item {% if sold_out %} sold-out{% endif %}{% if on_sale %} on-sale{% endif %} {{carousel}}" id="product-{{ product.id }}">
-  <div class="products">
+  <div class="products ">
     <div class="product-container">  
       
       <div class="thumb-v-carousel slides {{ product.title | handle }}">
@@ -183,7 +183,7 @@
         <div class="dt-sc-btn-group">
           {% if settings.enable_add_cart %}       
           <button type="submit" name="add" id="AddToCart-{{product.id}}" class="dT_AddToCart dt-sc-btn">
-            {% render 'icon-cart' %} {{ 'products.product.add_to_cart' | t }}
+         eeeee   {% render 'icon-cart' %} {{ 'products.product.add_to_cart' | t }}
           </button> 
           {% endif %}
 
@@ -195,7 +195,18 @@
       {% endif %} 
       {% include 'deal-snippet' %}     
     </div>
+    <div class="custom-product-add-to-cart">
+      <form action="/cart/add" method="post">                                  
+        <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+        <button type="submit" name="add" id="AddToCart-{{product.id}}" class="add-to-cart-btn">
+          add to cart
+        </button>
+      </form>
+    </div>
   </div>  
+  
+
+
   <script>  
     $(document).ready(function() {
       $('.middle-gallery_block.{{ product.title | handle }} .sliders .slides-show ul').not('.slick-initialized').slick({

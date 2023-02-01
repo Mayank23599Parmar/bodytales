@@ -698,7 +698,7 @@
   }
   @media screen and (max-width: 767px) {
     .hero-slider .container .hero-slider-wrapper {
-      height: 100vh;
+    //  height: 100vh;
     }
   }
   .hero-slider .container .hero-slider-wrapper .image-block .image-wrapper img {
@@ -733,3 +733,16 @@
     width: 100%;
     height: auto;
   }
+
+.add-to-cart-btn{
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: #865d4c;
+  color: #fff;
+  &:hover{
+    border: 1px solid #865d4c;
+    color:#865d4c ;
+    background-color: #fff;
+  }
+}

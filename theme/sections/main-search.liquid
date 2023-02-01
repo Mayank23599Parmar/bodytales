@@ -66,6 +66,14 @@
               <div class="product-detail">      
                 <a href="{{ item.url}}" class="grid-link__title">{{ item.title }}</a>
               </div>
+              <div class="custom-product-add-to-cart">
+                <form action="/cart/add" method="post">                                  
+                  <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+                  <button type="submit" name="add" id="AddToCart-{{product.id}}" class="add-to-cart-btn">
+                    add to cart
+                  </button>
+                </form>
+              </div>
             </div>
           </li>
           {% endif %}  

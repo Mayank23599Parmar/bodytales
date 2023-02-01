@@ -1,8 +1,10 @@
 .home-story-page {
     background-color: #ffff;
     padding: 15px 0;
+    margin-bottom: 35px;
     @include mq("phone-and-tablet") {
         padding: 20px 0;
+        margin-bottom: 30px;
     }
     .home-stories {
         max-width: 1440px;
